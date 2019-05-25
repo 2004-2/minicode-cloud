@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userCenter/userCenter",
+    "pages/courseRating/courseRating",
+    "pages/courseIndex/courseIndex",
+    "pages/createRating/createRating"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#eeeeee",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/courseRating/courseRating",
+        "text": "首页",
+        "iconPath": "image/menuicon/home.png",
+        "selectedIconPath": "image/menuicon/home2.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "image/menuicon/my.png",
+        "selectedIconPath": "image/menuicon/my2.png"
+      }
+    ]
+  }
+}

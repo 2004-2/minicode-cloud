@@ -1,0 +1,12 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+
+<block wx:for = "{{items}}">
+  <navigator
+    url="/pages/courseIndex/courseIndex">
+    <view class = "aItem">
+      <label class = "title">{{title}}</label>
+      <label class = "content">{{content}}</label>
+      <label class = "date">{{date}}</label>
+    </view>
+  </navigator>
+</block>

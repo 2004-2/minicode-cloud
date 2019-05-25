@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "撰写评价",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-field": "../../vant-weapp/dist/field/index",
+    "wux-upload": "../../wux/dist/upload/index"
+  }
+}

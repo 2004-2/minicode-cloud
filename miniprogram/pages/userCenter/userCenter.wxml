@@ -1,0 +1,89 @@
+<!--miniprogram/pages/userCenter/userCenter.wxml-->
+<view>
+  <block wx:if="{{ canIUse }}">
+    <block wx:if="{{ !userInfoAuthed }}">
+      <van-button
+        type="primary"
+        open-type="getUserInfo"
+        bind:getuserinfo="bindGetUserInfo"
+      >
+        授权登录
+      </van-button>
+    </block>
+    <block wx:else>
+
+      <van-cell-group>
+        <van-cell
+          title="用户信息"
+          use-label-slot
+        >
+          <view slot="label">
+            <van-row>
+              <van-col span="8">
+                <image
+                  src="{{ userInfo.avatarUrl }}"
+                  style="width: 50%; border-radius: 50%;"
+                  mode="widthFix"
+                ></image>
+              </van-col>
+              <van-col span="16">
+                <van-row>
+                  <van-col span="6">昵称</van-col>
+                  <van-col span="18" style="color: black;">
+                    {{ userInfo.nickName }}
+                  </van-col>
+                </van-row>
+                <van-row>
+                  <van-col span="6">性别</van-col>
+                  <van-col span="18" style="color: black;">
+                    {{ userInfo.gender == 0 ? "未知" :
+                       userInfo.gender == 1 ? "男" : "女" }}
+                  </van-col>
+                </van-row>
+                <van-row>
+                  <van-col span="6">身份</van-col>
+                  <van-col span="18">
+                    <van-tag plain type="danger">游客</van-tag>
+                    <van-tag plain type="success">已验证</van-tag>
+                  </van-col>
+                </van-row>
+              </van-col>
+            </van-row>
+          </view>
+        </van-cell>
+      </van-cell-group>
+
+      <view style="margin-top: 30rpx;"></view>
+
+      <van-cell-group>
+        <van-cell
+          title="课程测评记录"
+          icon="todo-list-o"
+          clickable
+        ></van-cell>
+        <van-cell
+          title="小程序授权状态"
+          icon="apps-o"
+          clickable
+          bind:click="openAuthSetting"
+        ></van-cell>
+      </van-cell-group>
+
+      <view style="margin-top: 60rpx;"></view>
+
+      <van-row>
+        <van-col span="22" offset="1">
+          <van-button
+            type="danger"
+            size="large"
+            bind:click="showClearDataDialog"
+          >
+            清除账号数据
+          </van-button>
+        </van-col>
+      </van-row>
+
+    </block>
+  </block>
+  <text wx:else>请升级微信版本</text>
+</view>

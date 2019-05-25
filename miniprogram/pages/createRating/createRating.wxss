@@ -1,0 +1,30 @@
+.page {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.property {
+  display: flex;
+  flex: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.textArea {
+  border: 1rpx solid gainsboro;
+  border-radius: 5px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  width: 156rpx;
+  height: 156rpx;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  margin-top: 10px;
+}
+.card text {
+  
+}

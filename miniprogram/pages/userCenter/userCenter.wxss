@@ -1,0 +1,4 @@
+/* miniprogram/pages/userCenter/userCenter.wxss */
+page {
+  background: #f6f6f6;
+}

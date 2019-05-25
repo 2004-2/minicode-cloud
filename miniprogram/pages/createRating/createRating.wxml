@@ -1,0 +1,65 @@
+<view class = "page">
+  <view class = "property">
+    <text>课程编码</text>
+    <text>CSCI 3100</text>
+  </view>
+
+  <view class = "property">
+    <text>教师</text>
+    <text>吕荣聪</text>
+  </view>
+
+  <view class = "property">
+    <text>授课语言</text>
+    <text>英文</text>
+  </view>
+  
+  <view class = "property">
+    <text>课程名称</text>
+    <text>Software Engineering</text>
+  </view>
+
+  <view class = "property">
+    <text>学分</text>
+    <text>3</text>
+  </view>
+
+  <view class = "property">
+    <text>注册条件</text>
+    <text>CSCI 3100</text>
+  </view>
+
+  <view class = "property">
+    <text>评分</text>
+    <van-rate value="{{value}}" bind:change="onChange" />
+  </view>
+
+  <view class = "property">
+    <text>点评</text>
+  </view>
+
+  <view class = "property">
+    <textarea class = "textArea" maxlength = "-1"/>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <wux-upload listType="picture-card" max="9" url="miniprogram/pages/createRating" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview">
+    <text>+</text>
+    </wux-upload>
+  </view>
+  
+  <view class = "cards">
+    <view class = "card" bindtap = "chooseImage">
+      <text>+</text>
+    </view>
+
+
+
+  </view>
+  <button bindtap = "submit">提交</button>
+
+  
+
+
+
+</view>
